@@ -37,6 +37,7 @@ use Smalot\PdfParser\Document;
 use Smalot\PdfParser\Element\ElementMissing;
 use Smalot\PdfParser\Font;
 use Smalot\PdfParser\Page;
+use Smalot\PdfParser\Config;
 use Tests\Smalot\PdfParser\TestCase;
 
 class PageTest extends TestCase
