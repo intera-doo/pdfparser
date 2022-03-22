@@ -78,7 +78,7 @@ class Config
      *
      * @var bool
      */
-    private $dataTmIncludeFontInfo = false;
+    private $dataTmFontInfoHasToBeIncluded = false;
 
     public function getFontSpaceLimit()
     {
@@ -140,13 +140,13 @@ class Config
         $this->decodeMemoryLimit = $decodeMemoryLimit;
     }
 
-    public function getDataTmIncludeFontInfo(): bool
+    public function getDataTmFontInfoHasToBeIncluded(): bool
     {
-        return $this->dataTmIncludeFontInfo;
+        return $this->dataTmFontInfoHasToBeIncluded;
     }
 
-    public function setDataTmIncludeFontInfo(bool $dataTmIncludeFontInfo): void
+    public function setDataTmFontInfoHasToBeIncluded(bool $dataTmFontInfoHasToBeIncluded): void
     {
-        $this->dataTmIncludeFontInfo = $dataTmIncludeFontInfo;
+        $this->dataTmFontInfoHasToBeIncluded = $dataTmFontInfoHasToBeIncluded;
     }
 }
