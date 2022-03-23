@@ -32,6 +32,7 @@
 
 namespace Tests\Smalot\PdfParser\Integration;
 
+use Smalot\PdfParser\Config;
 use Smalot\PdfParser\Document;
 use Smalot\PdfParser\Element\ElementMissing;
 use Smalot\PdfParser\Font;
@@ -442,11 +443,10 @@ class PageTest extends TestCase
         $this->assertStringContainsString('Purchase 2', $item[1]);
     }
 
-    public function testGetDataTmIncludeFileInfo(): void
+    public function testDataTmFontInfoHasToBeIncluded(): void
     {
-
         $config = new Config();
-        $config->setDataTmIncludeFontInfo(true);
+        $config->setDataTmFontInfoHasToBeIncluded(true);
 
         $filename = $this->rootDir.'/samples/Document1_pdfcreator_nocompressed.pdf';
         $parser = $this->getParserInstance($config);
